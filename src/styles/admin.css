@@ -1,0 +1,94 @@
+/* Custom admin styles for Payload CMS */
+.payload-admin {
+  --theme-elevation-0: #ffffff;
+  --theme-elevation-50: #f8fafc;
+  --theme-elevation-100: #f1f5f9;
+  --theme-elevation-200: #e2e8f0;
+  --theme-elevation-300: #cbd5e1;
+  --theme-elevation-400: #94a3b8;
+  --theme-elevation-500: #64748b;
+  --theme-elevation-600: #475569;
+  --theme-elevation-700: #334155;
+  --theme-elevation-800: #1e293b;
+  --theme-elevation-900: #0f172a;
+  
+  --theme-text: #0f172a;
+  --theme-text-dim: #64748b;
+  
+  --theme-success-50: #f0fdf4;
+  --theme-success-500: #22c55e;
+  --theme-success-600: #16a34a;
+  
+  --theme-warning-50: #fffbeb;
+  --theme-warning-500: #f59e0b;
+  --theme-warning-600: #d97706;
+  
+  --theme-error-50: #fef2f2;
+  --theme-error-500: #ef4444;
+  --theme-error-600: #dc2626;
+  
+  --theme-bg: #ffffff;
+  --theme-input-bg: #ffffff;
+  
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+}
+
+/* Custom branding */
+.payload-admin .nav__brand {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--theme-text);
+}
+
+/* Enhanced form styling */
+.payload-admin .field-type--text input,
+.payload-admin .field-type--textarea textarea,
+.payload-admin .field-type--select select {
+  border-radius: 0.5rem;
+  border: 1px solid var(--theme-elevation-300);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.payload-admin .field-type--text input:focus,
+.payload-admin .field-type--textarea textarea:focus,
+.payload-admin .field-type--select select:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Button enhancements */
+.payload-admin .btn {
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.payload-admin .btn--style-primary {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  border: none;
+}
+
+.payload-admin .btn--style-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+/* Collection list enhancements */
+.payload-admin .collection-list__table {
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Rich text editor styling */
+.payload-admin .rich-text-editor {
+  border-radius: 0.5rem;
+  border: 1px solid var(--theme-elevation-300);
+}
+
+.payload-admin .rich-text-editor .slate-editor {
+  min-height: 200px;
+  padding: 1rem;
+  line-height: 1.6;
+}

@@ -65,7 +65,7 @@ const mockPost = {
   slug: 'getting-started-nextjs-13-app-router'
 };
 
-export default function PostPage({ params }: { params: { slug: string } }) {
+export default function PostPage({ params }: { params: Promise<{ slug: string }> }) {
   // In a real app, you would fetch the post data based on the slug
   const post = mockPost;
 

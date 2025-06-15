@@ -22,7 +22,6 @@ export const getPosts = async (options?: {
       ...options?.where,
     },
     sort: options?.sort || '-publishedAt',
-    populate: ['author', 'categories', 'tags', 'featuredImage'],
   });
   
   return posts;
@@ -38,7 +37,6 @@ export const getPostBySlug = async (slug: string) => {
       status: { equals: 'published' },
     },
     limit: 1,
-    populate: ['author', 'categories', 'tags', 'featuredImage'],
   });
   
   return posts.docs[0] || null;

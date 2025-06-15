@@ -1,6 +1,6 @@
 import { buildConfig } from 'payload';
 import { slateEditor } from '@payloadcms/richtext-slate';
-import  postgresAdapter  from '@payloadcms/db-postgres'
+import  {postgresAdapter}  from '@payloadcms/db-postgres'
 import path from 'path';
 
 // Collections

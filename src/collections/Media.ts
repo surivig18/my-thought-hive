@@ -1,4 +1,4 @@
-import { CollectionConfig } from 'payload/types';
+import { CollectionConfig } from 'payload';
 
 export const Media: CollectionConfig = {
   slug: 'media',
@@ -6,7 +6,6 @@ export const Media: CollectionConfig = {
     useAsTitle: 'filename',
   },
   upload: {
-    staticURL: '/media',
     staticDir: 'media',
     imageSizes: [
       {

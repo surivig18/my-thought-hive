@@ -1,4 +1,4 @@
-import { Field } from 'payload/types';
+import { Field } from 'payload';
 import { formatSlug } from '../utils/formatSlug';
 
 type Slug = (fieldToUse?: string, overrides?: Partial<Field>) => Field;
@@ -6,7 +6,7 @@ type Slug = (fieldToUse?: string, overrides?: Partial<Field>) => Field;
 export const slugField: Slug = (fieldToUse = 'title', overrides = {}) => ({
   name: 'slug',
   label: 'Slug',
-  type: 'text',
+  type: 'richText',
   index: true,
   admin: {
     position: 'sidebar',
@@ -18,4 +18,4 @@ export const slugField: Slug = (fieldToUse = 'title', overrides = {}) => ({
     ],
   },
   ...overrides,
-});
+}) as Field;

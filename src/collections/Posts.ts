@@ -1,4 +1,4 @@
-import { CollectionConfig } from 'payload/types';
+import { CollectionConfig } from 'payload';
 import { slugField } from '../fields/slug';
 
 export const Posts: CollectionConfig = {
@@ -41,23 +41,6 @@ export const Posts: CollectionConfig = {
       type: 'richText',
       required: true,
       admin: {
-        elements: [
-          'h2',
-          'h3',
-          'h4',
-          'blockquote',
-          'ul',
-          'ol',
-          'link',
-          'upload',
-        ],
-        leaves: [
-          'bold',
-          'italic',
-          'underline',
-          'strikethrough',
-          'code',
-        ],
       },
     },
     {

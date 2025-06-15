@@ -3,29 +3,17 @@ import { slateEditor } from '@payloadcms/richtext-slate';
 import  {postgresAdapter}  from '@payloadcms/db-postgres'
 import path from 'path';
 
-// Collections
-import { Posts } from './src/collections/Posts';
-import { Categories } from './src/collections/Categories';
-import { Tags } from './src/collections/Tags';
-import { Users } from './src/collections/Users';
-import { Media } from './src/collections/Media';
 
 export default buildConfig({
   secret: process.env.PAYLOAD_SECRET ?? "",
   admin: {
-    user: Users.slug,
+    user: "",
     meta: {
       titleSuffix: '- Blog Admin',
     },
   },
   editor: slateEditor({}),
-  collections: [
-    Posts,
-    Categories,
-    Tags,
-    Users,
-    Media,
-  ],
+  
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),
   },

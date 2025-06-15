@@ -2,6 +2,7 @@ const { withPayload } = require('@payloadcms/next/withPayload');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'standalone',
   // output: 'export', // Remove this for Payload CMS
   eslint: {
     ignoreDuringBuilds: true,
@@ -10,9 +11,7 @@ const nextConfig = {
     unoptimized: true,
     domains: ['localhost'], // Add your domain here
   },
-  experimental: {
-    appDir: true,
-  },
+  
 };
 
 module.exports = withPayload(nextConfig);

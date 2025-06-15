@@ -14,12 +14,7 @@ export default buildConfig({
   },
   editor: slateEditor({}),
   
-  typescript: {
-    outputFile: path.resolve(__dirname, 'payload-types.ts'),
-  },
-  graphQL: {
-    schemaOutputFile: path.resolve(__dirname, 'generated-schema.graphql'),
-  },
+
   // plugins: [
   //   seoPlugin({
   //     collections: ['posts'],

@@ -1,28 +1,9 @@
 import { buildConfig } from 'payload';
-import { slateEditor } from '@payloadcms/richtext-slate';
 import  {postgresAdapter}  from '@payloadcms/db-postgres'
-import path from 'path';
 
 
 export default buildConfig({
   secret: process.env.PAYLOAD_SECRET ?? "",
-  admin: {
-    user: "",
-    meta: {
-      titleSuffix: '- Blog Admin',
-    },
-  },
-  editor: slateEditor({}),
-  
-
-  // plugins: [
-  //   seoPlugin({
-  //     collections: ['posts'],
-  //     uploadsCollection: 'media',
-  //     generateTitle: ({ doc }) => `Blog - ${doc.title}`,
-  //     generateDescription: ({ doc }) => doc.excerpt,
-  //   }),
-  // ],
   db: postgresAdapter({
     pool: {
       connectionString: process.env.DATABASE_URL,

@@ -1,8 +1,8 @@
-import { NextRequest } from 'next/server';
-import { getPayloadHMR } from '@payloadcms/next/utilities';
 import configPromise from '../../../payload.config';
+import { getPayload } from 'payload';
 
-export const GET = async (req: NextRequest) => {
- 
+export const GET = async (request: Request) => {
+  const payload = await getPayload({
+    config: configPromise,
+  })
 };
-

@@ -1,1 +1,1 @@
-my-thought-hive
+A blog site integrating payload cms with supabase 
